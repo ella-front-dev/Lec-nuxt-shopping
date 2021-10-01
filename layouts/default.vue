@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header></header>
+    <header>
+      <h1>Nuxt shopping</h1>
+    </header>
     <Nuxt />
   </div>
 </template>
