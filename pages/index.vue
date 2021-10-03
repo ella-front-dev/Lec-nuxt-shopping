@@ -1,9 +1,7 @@
 <template>
   <div>
     <main>
-      <div class="app">
-        <input type="text">
-      </div>
+      <search-input v-model="searchKeyword" @search="searchProducts"></search-input>
       <div>
         <ul>
           <li v-for="product in products" :key="product.id" class="item flex" @click="moveToDetailPage(product.id)">
@@ -19,8 +17,11 @@
 
 <script>
 import axios from 'axios';
+import SearchInput from '@/components/SearchInput.vue';
+import { fetchProductByKeyword } from '@/api/index'
 
 export default {
+  components: { SearchInput },
   async asyncData(){
     const response = await axios.get('http://localhost:3000/products')
     const products = response.data.map(item=> {
@@ -31,10 +32,24 @@ export default {
     })
     return { products }
   },
+  data() {
+    return {
+      searchKeyword: ''
+    }
+  },
   methods: {
     moveToDetailPage(id){
-      console.log(id);
-      this.$router.push();
+      this.$router.push(`detail/${id}`);
+    },
+    async searchProducts(){
+      const response = await fetchProductByKeyword(this.searchKeyword);
+      console.log(response.data)
+      this.products = response.data.map(item=> {
+        return {
+          ...item,
+          imageUrl: `${item.imageUrl}?random=${Math.random()}`
+        }
+      })
     }
   }
 }
