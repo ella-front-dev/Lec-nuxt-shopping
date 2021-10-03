@@ -11,6 +11,9 @@
           </li>
         </ul>
       </div>
+      <div class="cart-wrapper">
+        <button class="btn" @click="moveToCartPage">장바구니 바로가기</button>
+      </div>
     </main>
   </div>
 </template>
@@ -50,6 +53,9 @@ export default {
           imageUrl: `${item.imageUrl}?random=${Math.random()}`
         }
       })
+    },
+    moveToCartPage(){
+      this.$router.push('/cart')
     }
   }
 }
@@ -87,4 +93,9 @@ export default {
     font-size: 1rem;
     font-weight: 500;
   }
+  .btn { 
+    position: fixed; 
+    bottom: 32px;
+    right: 32px;
+   }
 </style>
