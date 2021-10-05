@@ -1,5 +1,8 @@
 export default {
   target: 'static',
+  generate: {
+    fallback: true
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Nuxt Shopping',
@@ -47,5 +50,5 @@ export default {
   },
   env: {
     baseURL: process.env.NODE_ENV === 'production' ? 'https://my-json-server.typicode.com/ella-front-dev/Lec-nuxt-shopping-api' : 'http://localhost:3000' 
-  }
+  },
 }
