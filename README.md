@@ -8,6 +8,7 @@ Nuxt Shopping 프로젝트 입니다.
 ### 배포 
  
 SSR 배포 URL : https://nuxt-shopping-app1.herokuapp.com/
+
 SSG 배포 URL : https://eager-allen-454cbc.netlify.app/
 
 <br />
