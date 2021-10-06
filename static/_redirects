@@ -1,2 +1,4 @@
 # Netlify settings for single-page application
 /*    /index.html   200
+/*    /cart/index.html   200
+/*    /product/index.html   200
