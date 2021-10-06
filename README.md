@@ -1,69 +1,62 @@
 # nuxt-shopping
 
-## Build Setup
+## 프로젝트 소개
+Nuxt Shopping 프로젝트 입니다.
+
+> 해당 글의 내용은 [인프런] Nuxt.js 시작하기 강의를 토대로 만들어졌습니다.
+
+### 배포 
+ 
+SSR 배포 URL : https://nuxt-shopping-app1.herokuapp.com/
+SSG 배포 URL : https://eager-allen-454cbc.netlify.app/
+
+<br />
+
+
+## 프로젝트 설치 및 실행
 
 ```bash
-# install dependencies
+# 설치 
 $ npm install
 
-# serve with hot reload at localhost:3000
+# 개발 모드 실행
 $ npm run dev
 
-# build for production and launch server
+# server모드 배포 및 실행
 $ npm run build
 $ npm run start
 
-# generate static project
+# static 모드 배포
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+## 폴더 구조 설명
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```
+.
+├── api : api 함수들이 있는 폴더
+├── assets : 기타 자원 폴더
+├── backend : server 폴더
+├── components : 컴포넌트 폴더
+├── layouts : page 컴포넌트의 상위 폴더로 페이지의 공통 레이아웃 파일들
+│   ├── default.vue
+│   └── error.vue
+├── nuxt.config.js : nuxt 기본 셋팅
+├── package.json : 프로젝트 및 패키지 정보
+├── pages : page 컴포넌트로 자동 라우팅이 되는 폴더
+│   ├── cart.vue
+│   ├── detail
+│   │   └── _id.vue
+│   ├── index.vue
+│   └── product.vue
+├── static : 정적 자원 폴더
+└── store : vuex 저장소
 
-### `assets`
+```
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## 브랜치 설명
+  - master
+  - develop : 개발 브랜치(기본)
+  - deploy/heroku : SSR 모드 배포 브랜치 
+  - deploy/netlify : SSG 모드 배포 브랜치
