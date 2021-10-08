@@ -3,8 +3,6 @@
 ## 프로젝트 소개
 Nuxt Shopping 프로젝트 입니다.
 
-> 해당 글의 내용은 [인프런] Nuxt.js 시작하기 강의를 토대로 만들어졌습니다.
-
 ### 배포 
  
 SSR 배포 URL : https://nuxt-shopping-app1.herokuapp.com/
